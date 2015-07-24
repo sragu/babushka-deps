@@ -23,11 +23,17 @@ dep 'virtualbox.cask' do
   meet { shell "brew cask install virtualbox" }
 end
 
+dep 'boot2docker.cask' do
+  met? { "/opt/homebrew-cask/Caskroom/boot2docker".p.exists? }
+  meet { shell "brew cask install boot2docker" }
+end
+
 dep 'apps' do
   requires 'homebrew.cask'
   requires 'iterm2.cask'
   requires 'java.cask'
   requires 'vagrant.cask'
   requires 'virtualbox.cask'
+  requires 'boot2docker.cask'
 end
 
