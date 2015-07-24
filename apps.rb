@@ -28,6 +28,11 @@ dep 'boot2docker.cask' do
   meet { shell "brew cask install boot2docker" }
 end
 
+dep 'intellij-ce.cask' do
+  met? { "/opt/homebrew-cask/Caskroom/intellij-idea-ce".p.exists? }
+  meet { shell "brew cask install intellij-idea-ce"}
+end
+
 dep 'apps' do
   requires 'homebrew.cask'
   requires 'iterm2.cask'
@@ -35,5 +40,7 @@ dep 'apps' do
   requires 'vagrant.cask'
   requires 'virtualbox.cask'
   requires 'boot2docker.cask'
+  
+  requires 'intellij-ce.cask'
 end
 
