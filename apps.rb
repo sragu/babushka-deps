@@ -24,7 +24,7 @@ dep 'virtualbox.cask' do
 end
 
 dep 'boot2docker.cask' do
-  met? { "/opt/homebrew-cask/Caskroom/boot2docker".p.exists? }
+  met? { "/usr/local/bin/docker".p.exists? }
   meet { shell "brew cask install boot2docker" }
 end
 
