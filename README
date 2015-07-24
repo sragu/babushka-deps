@@ -1,1 +1,3 @@
-deps for setting up my mac
+Using babushka to manage dependencies
+
+uses homebrew for packages and homebrew cask (caskroom.io) for apps
