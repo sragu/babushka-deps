@@ -9,5 +9,7 @@ end
 dep 'terminal' do 
   requires 'homebrew'
   requires 'bash.managed'
+
+  requires 'ssh keys generated'
 end
 
