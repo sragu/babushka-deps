@@ -1,9 +1,5 @@
 dep 'bash.managed' do
-  installs 'bash', 'zsh', 'antigen'
-end
-
-dep 'zsh.managed' do
-  installs 'zsh'
+  installs 'bash', 'zsh', 'antigen', 'autojump'
 end
 
 dep 'terminal' do 
@@ -11,5 +7,7 @@ dep 'terminal' do
   requires 'bash.managed'
 
   requires 'ssh keys generated'
+
+  requires 'zsh config'
 end
 
