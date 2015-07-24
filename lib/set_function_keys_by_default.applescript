@@ -3,7 +3,9 @@ tell application "System Preferences"
 end tell
 
 tell application "System Events" to tell process "System Preferences"
-    click checkbox 1 of tab group 1 of window 1
+	tell tab group 1 of window 1
+    	tell checkbox 1 to if value is 0 then click
+	end tell
 end tell
 
 quit application "System Preferences"
