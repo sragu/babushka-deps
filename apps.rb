@@ -13,6 +13,10 @@ dep "java.cask" do
   meet { shell "brew cask install java"  }
 end
 
+dep "node.managed" do
+  installs 'node'
+end
+
 dep 'vagrant.cask' do
   met? { "/usr/local/bin/vagrant".p.exists? }
   meet { shell "brew cask install vagrant" }
@@ -46,6 +50,8 @@ dep 'apps' do
   requires 'homebrew.cask'
   requires 'iterm2.cask'
   requires 'java.cask'
+  requires 'node.managed'
+
   requires 'vagrant.cask'
   requires 'virtualbox.cask'
   requires 'boot2docker.cask'
