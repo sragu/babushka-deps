@@ -33,6 +33,15 @@ dep 'intellij-ce.cask' do
   meet { shell "brew cask install intellij-idea-ce"}
 end
 
+dep 'Mou.cask' do
+  met? { "/opt/homebrew-cask/Caskroom/mou".p.exists? }
+  meet { shell "brew cask install mou"}
+end
+
+dep 'Sublime Text.app' do
+  sparkle 'http://www.sublimetext.com/updates/3/stable/appcast_osx.xml'
+end
+
 dep 'apps' do
   requires 'homebrew.cask'
   requires 'iterm2.cask'
@@ -42,5 +51,7 @@ dep 'apps' do
   requires 'boot2docker.cask'
   
   requires 'intellij-ce.cask'
+  requires 'Mou.cask'
+  requires 'Sublime Text.app'
 end
 
